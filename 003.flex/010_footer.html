@@ -1,0 +1,603 @@
+2. 조윤식
+#5690
+
+2. 김만학 — 오늘 오후 2:57
+감사합니다
+(강사) 이호준 - Licat — 오늘 오후 3:02
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, h1, p, button {
+            padding: 0;
+            margin: 0;
+        }
+
+        .뒷배경 {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: fixed;
+        }
+
+        .공지박스 {
+            width: 500px;
+            background-color: white;
+            border: 5px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 보통 모달창은 contents 맨 아래 줍니다. -->
+    <div class="뒷배경">
+        <div class="공지박스">
+            <h1>hello world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deleniti quidem iure qui, beatae, id maiores corporis aliquam minima animi maxime, accusamus corrupti enim a asperiores illum facilis blanditiis similique.</p>
+            <button class="btn1">닫어!</button>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti modi corporis excepturi consequuntur saepe maiores, debitis cumque? Tempora sequi perspiciatis iste! Magnam atque mollitia libero, illo explicabo aperiam quibusdam harum?
+    Sapiente minima, perferendis, cum perspiciatis esse ut rem asperiores enim quisquam corporis molestiae sint aliquid quia! Ea officia, quam quo qui eligendi numquam deserunt non placeat aspernatur aliquam nesciunt in.
+    Excepturi distinctio sapiente non exercitationem quidem animi rem enim, aut libero et quibusdam blanditiis minima necessitatibus architecto provident? Porro dicta fuga tenetur perspiciatis sed ipsam esse adipisci dolorum ab facilis.
+    Accusamus accusantium beatae distinctio aliquid adipisci esse ut recusandae provident cupiditate nam autem cumque, voluptatibus modi sint repellendus. Quis laboriosam nam distinctio facere autem id, fuga numquam blanditiis amet illum.
+    Cupiditate molestias nemo quo cum quos consequuntur aperiam ipsum voluptas neque aliquam repudiandae, ex placeat voluptatum natus voluptate quidem qui blanditiis eveniet et ipsa, velit, voluptatem reprehenderit odio! Alias, vel?</p>
+    <button class="btn2">열어!</button>
+
+    <script>
+        let 모달 = false;
+
+        document.querySelector('.btn1').addEventListener('click', function(){
+            if (모달 == true){
+                document.querySelector('.뒷배경').style.display = 'none';
+                모달 = false;
+            }
+        });
+
+        document.querySelector('.btn2').addEventListener('click', function(){
+            if (모달 == false){
+                document.querySelector('.뒷배경').style.display = 'flex';
+                모달 = true;
+            }
+        });
+
+    </script>
+</body>
+</html>
+2. 김유선 — 오늘 오후 3:02
+우와..
+2. 홍제섭 — 오늘 오후 3:03
+와우..
+2.강혜진 — 오늘 오후 3:03
+토오~~~옹 통~
+2. 홍제섭 — 오늘 오후 3:03
+
+이런 UI 만들어서
+통통 튀게하면
+재밌을것같아여
+2.강혜진 — 오늘 오후 3:04
+ㅋㅋㅋ통통 뛰다... 아래로 떨어짐...
+1.안예은 — 오늘 오후 3:04
+좋아요!!
+2. 홍제섭 — 오늘 오후 3:04
+아래로 떨어지는게 아닌 그때 딱
+모달창이 나오는거죠
+1.박누리 — 오늘 오후 3:04
+오징어 게임에 나오는 건가요??
+김한별 — 오늘 오후 3:04
+ㅇㅅㅁ.
+2. 홍제섭 — 오늘 오후 3:04
+킹혜진님 어떠세요
+1. 홍예림 — 오늘 오후 3:04
+노가다느껴짐,,
+2. 홍제섭 — 오늘 오후 3:05
+맞아요!!
+2.강혜진 — 오늘 오후 3:05
+제섭님의 프로젝트 기대하겠습니다
+2.김준수 — 오늘 오후 3:06
+
+2. 홍제섭 — 오늘 오후 3:07
+오 그러면
+시간은 엄청 빨리 갈 것 같아요
+졸음 없이
+그러면 그냥 코딩하시는거 볼께요 쌤..
+2.서지영 — 오늘 오후 3:07
+코드 복사 부탁드려요!
+ㅋㅋㅋㅋ제섭님 이미 읽어버리셨어요..
+1.장효순 — 오늘 오후 3:07
+제섭님 이미 봤어요
+(강사) 한재현 - Wade — 오늘 오후 3:08
+크흑... ㅠㅠ...
+(강사) 이호준 - Licat — 오늘 오후 3:08
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive and interactive</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    display: flex
+    <div class="container-color container">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
+2.서지영 — 오늘 오후 3:08
+마상 당하셨어요...호준강사님..
+1. 맹하령 — 오늘 오후 3:08
+안돼 ㅋㅋㅋㅋㅋㅋ
+2. 홍제섭 — 오늘 오후 3:08
+마음의 상처
+1.장효순 — 오늘 오후 3:08
+마음의 상처,,
+2. 홍제섭 — 오늘 오후 3:08
+입니다 쌤
+1.고영진 — 오늘 오후 3:08
+ㅋㅋㅋㅋ
+박경서 — 오늘 오후 3:08
+ㅋㅋㅋㅋㅋ
+2. 홍제섭 — 오늘 오후 3:08
+제가 삭제를 조금 더 빨리했었어야했는데..
+2.서지영 — 오늘 오후 3:08
+마음의 상처요!!
+1.고영진 — 오늘 오후 3:08
+마음의 상처
+(강사) 한재현 - Wade — 오늘 오후 3:08
+저ㄴ 괜찮습니다
+2. 조윤식 — 오늘 오후 3:08
+ㅋㅋㅋㅋㅋㅋ
+2.윤수영 — 오늘 오후 3:08
+아 제섭뉘임~
+2. 홍제섭 — 오늘 오후 3:08
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+2. 김만학 — 오늘 오후 3:08
+ㅋㅋㅋㅋㅋㅋㅋㅋ
+1. 맹하령 — 오늘 오후 3:08
+재현님 강의 2시간 뺴서 한다고 하자마자 안돼 라고..
+1.임준홍 — 오늘 오후 3:08
+이거 뜨는 조건이 뭐죠..?
+1. 맹하령 — 오늘 오후 3:08
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+1.장효순 — 오늘 오후 3:09
+제섭
+2.윤수영 — 오늘 오후 3:09
+제섭
+1.임준홍 — 오늘 오후 3:09
+제섭
+2.김민주 — 오늘 오후 3:09
+제섭님 호출이요
+2. 김만학 — 오늘 오후 3:09
+lion-cat 끌 수 없나요?
+1.고하나 — 오늘 오후 3:09
+ㅋㅋㅋㅋㅋ
+2. 홍제섭 — 오늘 오후 3:09
+멈춰..
+김정민 — 오늘 오후 3:09
+ㅋㅋㅋㅋ
+2.유현세 — 오늘 오후 3:09
+zzzzzzzz
+1. 이승연(2) — 오늘 오후 3:09
+ㅋㅋㅋㅋㅋㅋ
+1.안예은 — 오늘 오후 3:09
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+1. 홍예림 — 오늘 오후 3:09
+한별님 클론임
+(강사) 한재현 - Wade — 오늘 오후 3:09
+ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+1. 홍예림 — 오늘 오후 3:09
+ㅋㅋㅋ
+2. 홍제섭 — 오늘 오후 3:09
+아 죄송해요 한 마디 한 마디를 조심할게요 진짜...
+2.강혜진 — 오늘 오후 3:09
+함부로 얘기했다간
+2. 홍제섭 — 오늘 오후 3:09
+짤파티네요 진짜
+2.강혜진 — 오늘 오후 3:09
+금지어 발생
+2.양강현 — 오늘 오후 3:09
+라이언캣 우클릭하셔서 차단..하시면 되여
+(강사) 이호준 - Licat — 오늘 오후 3:10
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive and interactive</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1000px) {
+            
+        }
+
+        @media screen and (max-width: 700px) {
+            
+        }
+    </style>
+</head>
+<body>
+    display: flex
+    <div class="container-color container">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
+2.유현세 — 오늘 오후 3:10
+오!
+1.임준홍 — 오늘 오후 3:10
+감사합니다
+박정훈 — 오늘 오후 3:13
+flex 기본 값이 row인데 따로 주신 이유가 있을가요? 헷갈려서요 ㅠㅠ
+김정민 — 오늘 오후 3:16
+wrap이용
+2.곽성재 — 오늘 오후 3:16
+wrap
+2.김민주 — 오늘 오후 3:16
+wrap
+안선영 — 오늘 오후 3:16
+wrap!
+2.심영은 — 오늘 오후 3:16
+flex-wrap
+박정훈 — 오늘 오후 3:16
+wrap
+2. 임은지 — 오늘 오후 3:16
+wrap
+이지아 — 오늘 오후 3:16
+wrap
+2.심영은 — 오늘 오후 3:17
+코드 공유 부탁드립니다 🙂
+2.유현세 — 오늘 오후 3:18
+1,2 다 부탁드립니다 ㅠ
+(강사) 이호준 - Licat — 오늘 오후 3:19
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive and interactive</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .container {
+                display: flex;
+            }
+            .item {
+                flex: 1;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .item {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-color container">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
+2. 홍제섭 — 오늘 오후 3:19
+---1---
+(강사) 이호준 - Licat — 오늘 오후 3:19
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive and interactive</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 25%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .container {
+                display: flex;
+            }
+            .item {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-color container">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
+2. 홍제섭 — 오늘 오후 3:19
+---2---
+(강사) 이호준 - Licat — 오늘 오후 3:19
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 정리</title>
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* display: block; */
+            /* display: inline-flex; */
+        }
+
+        @media screen and (max-width: 1000px) {
+            .container1 {
+                flex-direction: row;
+            }
+
+            .item1 {
+                flex: 1;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .container1 {
+                flex-direction: column;
+            }
+
+            .item1 {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    display: flex
+    <div class="container-color container1">
+        <div class="item-color item1">1 Lorem.</div>
+        <div class="item-color item1">2 Lorem, ipsum.</div>
+        <div class="item-color item1">3 Lorem, ipsum dolor.</div>
+        <div class="item-color item1">4 Lorem ipsum dolor sit.</div>
+        <div class="item-color item1">5 Lorem.</div>
+        <div class="item-color item1">6 Lorem, ipsum.</div>
+        <div class="item-color item1">7 Lorem, ipsum dolor.</div>
+        <div class="item-color item1">8 Lorem ipsum dolor sit.</div>
+        <div class="item-color item1">9 Lorem.</div>
+        <div class="item-color item1">10 Lorem, ipsum.</div>
+        <div class="item-color item1">11 Lorem, ipsum dolor.</div>
+        <div class="item-color item1">12 Lorem ipsum dolor sit.</div>
+        <div class="item-color item1">13 Lorem.</div>
+        <div class="item-color item1">14 Lorem, ipsum.</div>
+        <div class="item-color item1">15 Lorem, ipsum dolor.</div>
+        <div class="item-color item1">16 Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
+2. 홍제섭 — 오늘 오후 3:19
+---3---
+아뇨 괜찮을 것 같아요!
+어차피 한번씩 다 봐야하는 거니까..
+(강사) 이호준 - Licat — 오늘 오후 3:21
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+확장
+message.txt
+8KB
+﻿
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 정리</title>
+    <style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+		.content {
+			overflow: auto;
+			flex: 1;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+		<header>header</header>
+		<section class="content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempora est ea incidunt laudantium architecto, dolores, nam accusamus dolore, cupiditate consequuntur? Debitis ab quo non eum quam, explicabo voluptatum natus.
+            Rem explicabo mollitia vero quas ea minus amet magnam ab eligendi animi necessitatibus suscipit deleniti dolorem molestiae libero ipsa, quisquam magni cupiditate recusandae. Sunt fugiat ex voluptate vero rem quibusdam?
+            Repudiandae recusandae, nesciunt blanditiis sequi saepe vel. Fugiat, repellendus eum excepturi ipsa nihil asperiores quos doloremque quis sunt, a, reprehenderit officiis tempora rem? Unde amet repellendus quos, sapiente deleniti labore.
+            At, pariatur! Praesentium, odit, cupiditate a animi sint aliquam nisi quidem nemo officiis magnam necessitatibus? Deserunt sed, vel culpa dolorum velit possimus similique. Accusamus fugiat consequuntur obcaecati. Doloribus, eos provident.
+            Repellendus commodi consequuntur temporibus, quaerat sed dolorum veniam reprehenderit architecto numquam ducimus quasi, debitis facere. In natus labore, ex quos sunt consectetur laborum, inventore minima quod, vitae ullam temporibus dolor!
+            Maiores non aperiam corporis assumenda ratione animi maxime odio autem magnam velit, quidem eaque harum eius, quasi laborum incidunt fugiat! Possimus aut similique dolore amet vero dicta sit quidem maxime?
+            A amet exercitationem explicabo at nisi, ea eveniet id fuga maxime in alias fugiat aliquid doloremque molestiae tempore non officiis iure. Commodi vitae facere non expedita architecto officia reprehenderit veritatis!
+            Praesentium, facere quasi sit aliquam vero aut repellendus molestiae, eum corporis distinctio, officiis provident neque hic temporibus laborum quod voluptatibus molestias rem dicta aspernatur ipsa reprehenderit. Delectus dolore rerum doloribus.
+            Corporis vero fugiat itaque, corrupti quidem ipsa vitae autem assumenda natus laborum fugit, eos rem tempore inventore tempora. Vel, voluptas quaerat dolor consectetur harum impedit a delectus est nam dolorum.
+            Deleniti et eveniet necessitatibus? Totam magni neque aperiam at, ipsa iure, praesentium debitis qui eveniet quae molestias fugit voluptas sit cupiditate facere unde? Mollitia dolores corrupti accusantium sit impedit accusamus.
+            Voluptate alias numquam quidem, nesciunt totam rerum esse facere dolor id autem officiis neque fuga soluta distinctio cum. Ab qui esse quae quis voluptatem inventore nostrum voluptas molestiae, voluptates iste.
+            Ut, minima. Provident aperiam possimus nesciunt, praesentium corrupti incidunt eligendi temporibus, quam omnis nam velit consectetur, voluptate esse. Amet aspernatur ullam dignissimos iusto! Corrupti ducimus, omnis vel enim rerum voluptatem!
+            Reprehenderit similique dicta tempora eveniet natus temporibus odio asperiores obcaecati amet numquam eaque commodi, nulla eius non quam optio! Facere nisi natus earum ea consequuntur. Velit dignissimos fuga corrupti? Facilis?
+            Repellat pariatur commodi quo tempore? Tempora error magnam magni incidunt voluptatibus labore sapiente beatae suscipit sed harum iste, aperiam ratione deleniti commodi quas numquam minima pariatur sunt quo maxime quasi.
+            Aliquid, deserunt eius corrupti odit fugiat suscipit atque qui sit vitae, dolor eveniet ea saepe id ipsa aspernatur, repellat quos explicabo impedit. Harum, accusantium animi? Ipsam nisi facilis quos ad?
+            Illum dicta in distinctio minima eligendi! Eius magnam, neque dolorum rerum, quisquam iusto accusamus labore necessitatibus molestiae blanditiis veritatis porro saepe. Cum, culpa vel et odit velit sequi ipsum sit!
+            Debitis optio fugiat eligendi itaque, commodi libero accusantium tenetur a esse iure deleniti exercitationem perferendis non. Repellendus consequuntur error enim libero facere, iste neque nesciunt id quos reprehenderit. Eos, tempora.
+            Maiores in earum nam velit eaque consequuntur! Dolores veniam reprehenderit numquam blanditiis doloremque! Id fugiat alias animi nostrum, neque voluptatibus quaerat perspiciatis culpa provident dolor quod amet delectus quasi perferendis!
+            Similique esse accusantium quas, odio, sequi incidunt sunt unde eaque id aliquam repellendus consequuntur numquam voluptatibus, nisi consectetur! Quis possimus beatae iste nulla numquam similique magnam eos accusamus est assumenda?
+            Minus temporibus praesentium at quo sit rerum nobis id doloribus perspiciatis exercitationem, labore sapiente ipsum iure tempore minima quod voluptate autem qui eaque enim sunt. Sint ipsum molestias officiis nisi.
+            Aut dolorum eos molestias cumque aspernatur soluta culpa est voluptatibus eum odit quibusdam suscipit, voluptates, excepturi ex! Voluptates facilis et, consectetur, sequi saepe corrupti veritatis exercitationem, dignissimos accusamus fugit alias?
+            Molestias reprehenderit necessitatibus dicta nemo obcaecati, cum quos eius architecto similique, numquam magni nam aut iusto libero praesentium. Ullam in accusantium libero iure sint magni voluptas ex officiis laudantium impedit?
+            Aliquam quos suscipit, consectetur consequatur aspernatur totam tempore animi nihil dolore voluptate blanditiis, assumenda, inventore distinctio vero porro? Incidunt perferendis velit quae provident temporibus suscipit autem dolores nulla, quibusdam soluta.
+            Tenetur tempore labore facere assumenda provident quo temporibus doloribus officiis autem dicta ea tempora, ipsa unde vero cumque consequatur commodi, ex et. Recusandae tempora, voluptas modi saepe velit mollitia in.
+            In fuga ducimus, eum at dolore voluptate ea amet ex officiis vel mollitia odio nemo cumque iste repellendus quis numquam. Natus rerum quibusdam cumque officiis quaerat fugit sint consectetur placeat?
+            Reprehenderit, aspernatur suscipit officiis dolores expedita quas. Cum vero porro, magni veritatis est vitae sequi. Consectetur ad non reiciendis inventore accusamus. Est repellendus cupiditate deserunt voluptate quia voluptatem! Fugiat, placeat.
+            Suscipit veniam quisquam vitae iusto? Ipsum impedit iusto ipsam quae nostrum, a eveniet distinctio repudiandae consequuntur eaque nobis magnam nam nesciunt doloribus, doloremque sed debitis officiis. Natus odio dolores dolorum.
+            Aliquam, quibusdam, atque veniam sunt minima, reiciendis et harum explicabo voluptas molestias nemo consectetur provident non eligendi temporibus? Molestias, animi ipsum ullam illum nobis quidem doloremque! Quasi doloremque sapiente laudantium!
+            Incidunt ab deserunt tempora neque molestiae quas fugit quam amet distinctio rerum modi assumenda ad inventore cupiditate fugiat hic explicabo nam perspiciatis, expedita velit laborum? Perferendis laudantium fuga facere consequuntur!
+            Explicabo hic voluptatum architecto nostrum dolore temporibus qui iste provident aspernatur eligendi, suscipit molestias necessitatibus dolorem eum delectus consequuntur natus, blanditiis earum. Impedit doloremque accusantium sunt error eum corrupti asperiores.
+		</section>
+		<footer>footer</footer>
+    </div>
+</body>
+</html>

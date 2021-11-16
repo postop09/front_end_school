@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>codepen_grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+    }
+    header {
+      flex: 1;
+    }
+
+    .section_board {
+      transform: rotateX(60deg) rotateY(-10deg) rotateZ(50deg);
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .board_item {
+      border: 5px solid darkslategray;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: all .2s;
+    }
+    .board_item input {
+      /* position: absolute;
+      left: -9999px; */
+      display: none;
+    }
+    .board_item label{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 50%;
+    }
+    .board_item input:checked + label{
+      color: wheat;
+      background-color: tomato;
+    }
+    .board_item:hover {
+      /* transform: translateX(-10px) translateY(-10px); */
+      cursor: pointer;
+      top: -10px;
+      left: -10px;
+    }
+    .board_item::after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: darkgray;
+      z-index: -1;
+      transition: all .2s;
+    }
+    .board_item:hover::after {
+      top: 20px;
+      left: 20px;
+    }
+    .board_item:nth-child(2n) {
+      background-color: crimson;
+    }
+    .board_item:nth-child(2n-1) {
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>codepen</h1>
+  </header>
+  <section class="section_board">
+    <div class="board_item">
+      <input type="radio" id="radio1" name="check">
+      <label for="radio1">1</label>
+    </div>
+    <div class="board_item">
+      <input type="radio" id="radio2" name="check">
+      <label for="radio2">2</label>
+    </div>
+    <div class="board_item">3</div>
+    <div class="board_item">4</div>
+    <div class="board_item">5</div>
+    <div class="board_item">6</div>
+    <div class="board_item">7</div>
+    <div class="board_item">8</div>
+    <div class="board_item">9</div>
+    <div class="board_item">10</div>
+    <div class="board_item">11</div>
+    <div class="board_item">12</div>
+    <div class="board_item">13</div>
+    <div class="board_item">14</div>
+    <div class="board_item">15</div>
+    <div class="board_item">16</div>
+  </section>
+</body>
+</html>
