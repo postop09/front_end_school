@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>perspective</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .scene {
+      border: 1px solid red;
+      width: 220px;
+      height: 140px;
+      /* position: relative; */
+      perspective: 500px;
+    }
+    .carousel {
+      border: 1px solid red;
+      width: 100%;
+      height: 100%;
+      /* position: absolute; */
+      transform-style: preserve-3d;
+    }
+    .carousel:hover {
+    transform: rotateY(360deg);
+    transition: all 10s linear;
+    }
+    .carousel__cell {
+      position: absolute;
+      width: 200px;
+      height: 160px;
+      left: 10px;
+      top: 10px;
+    }
+    .carousel__cell:nth-child(1) {
+      transform: rotateY(0deg) translateZ(288px);
+      background-color: rgba(255, 0, 0, 0.445);
+    }
+
+    .carousel__cell:nth-child(2) {
+      transform: rotateY(40deg) translateZ(288px);
+      background-color: rgba(0, 0, 255, 0.479);
+    }
+
+    .carousel__cell:nth-child(3) {
+      transform: rotateY(80deg) translateZ(288px);
+      background-color: rgba(0, 128, 0, 0.459);
+    }
+
+    .carousel__cell:nth-child(4) {
+      transform: rotateY(120deg) translateZ(288px);
+      background-color: rgba(255, 166, 0, 0.493);
+    }
+
+    .carousel__cell:nth-child(5) {
+      transform: rotateY(160deg) translateZ(288px);
+      background-color: rgba(128, 0, 128, 0.459);
+    }
+
+    .carousel__cell:nth-child(6) {
+      transform: rotateY(200deg) translateZ(288px);
+      background-color: rgba(0, 0, 139, 0.425);
+    }
+
+    .carousel__cell:nth-child(7) {
+      transform: rotateY(240deg) translateZ(288px);
+      background-color: rgba(255, 255, 0, 0.466);
+    }
+
+    .carousel__cell:nth-child(8) {
+      transform: rotateY(280deg) translateZ(288px);
+      background-color: rgba(216, 112, 147, 0.466);
+    }
+
+    .carousel__cell:nth-child(9) {
+      transform: rotateY(320deg) translateZ(288px);
+      background-color: rgba(160, 81, 45, 0.411);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scene">
+    <div class="carousel">
+      <div class="carousel__cell">1</div>
+      <div class="carousel__cell">2</div>
+      <div class="carousel__cell">3</div>
+      <div class="carousel__cell">4</div>
+      <div class="carousel__cell">5</div>
+      <div class="carousel__cell">6</div>
+      <div class="carousel__cell">7</div>
+      <div class="carousel__cell">8</div>
+      <div class="carousel__cell">9</div>
+    </div>
+  </div>
+</body>
+
+</html>

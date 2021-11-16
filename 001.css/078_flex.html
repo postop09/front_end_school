@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>naver login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    h1 {
+      position: absolute;
+      text-indent: -9999px;
+    }
+    section {
+      border: 1px solid rgb(175, 175, 175);
+      width: 400px;
+      margin: 30px;
+      padding: 15px;
+    }
+
+    section > p {
+      padding-bottom: 10px;
+      padding-left: 5px;
+      font-size: 13px;
+      color: gray;
+    }
+
+    button {
+      border-style: none;
+      border-radius: 5px;
+      background-color: #19ce60;
+      width: 100%;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: aliceblue;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button:hover {
+      background-color: #1fbd5e;
+      transition: all .15s;
+    }
+
+    ul {
+      margin-left: 5px;
+    }
+
+    section ul li {
+      padding-top: 10px;
+      font-size: 12px;
+    }
+
+    section ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    section ul li:hover {
+      text-decoration: underline;
+    }
+
+    .pw {
+      position: relative;
+      right: 85px;
+    }
+
+    .pw::before {
+      content: '';
+      display: inline-block;
+      background-color: rgb(199, 199, 199);
+      border-radius: 100%;
+      width: 3px;
+      height: 3px;
+      margin-left: 6px;
+      vertical-align: 3px;
+    }
+
+    .lock {
+      width: 10px;
+      height: 13px;
+    }
+
+    .user {
+      width: 12px;
+      height: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 접근성을 위해 항상 제목은 있어야 한다. -->
+  <h1>네이버 로그인</h1>
+  <section>
+    <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+    <!-- 로그인 '페이지'로 이동하는 기능이기 때문에 <a>태그가 더 적절하다 -->
+    <!-- <button>을 주려면 type=button 값을 주는 것이 더 좋겠다. -->
+    <button>
+      <!-- 정보를 전달하지 않아도 되는 것이므로, background-image 로 주는 것이 더 좋을 듯 하다.-->
+      <img src="img/title.png" alt="네이버 로그인">
+      로그인
+    </button>
+    <ul>
+      <li class="id">
+        <img class="lock" src="img/lock.png" alt="">
+        <a href="">아이디</a>
+      </li>
+      <li class="pw">
+        <a href="">비밀번호찾기</a>
+      </li>
+      <li class="new">
+        <img class="user" src="img/user.png" alt="">
+        <a href="">회원가입</a>
+      </li>
+    </ul>
+  </section>
+</body>
+
+</html>

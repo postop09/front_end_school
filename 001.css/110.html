@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css설계 기법</title>
+    <style>
+      /* OOCSS */
+      /* .btn1 {
+        width: 200px;
+        height: 80px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .btn2 {
+        width: 200px;
+        height: 80px;
+        font-size: 30px;
+        background-color: black;
+        color: wheat;
+        border: 3px dotted wheat;
+      } */
+      /* .btn {
+        width: 200px;
+        height: 80px;
+        font-size: 30px;
+      }
+      .btn-close {
+        background-color: black;
+        color: wheat;
+        border: 3px dotted wheat;
+      } */
+
+      /* OOCSS 2 */
+      /* #main .btn {
+        width: 300px;
+        padding: 20px 10px;
+        margin: 10px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      #main .general {
+        background-color: tomato;
+        color: black;
+      }
+      #main .warning {
+        background-color: brown;
+        color: cornflowerblue;
+      } */
+
+      /* SMACSS */
+      /* module 방식 */
+      /* .btn {
+        display: inline-block;
+        width: 300px;
+        padding: 20px 10px;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        background-color: darkcyan;
+        color: darkmagenta;
+      }
+      .btn.btn-small {  subclass 부여 
+        width: 80px;
+        padding: 10px 0;
+        font-size: 14px;
+      }
+      .btn.btn-long {
+        width: 160px;
+      } */
+
+      /* state */
+        /* .tabnav {
+            display: flex;
+        }
+        .tabnav li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .tabnav li:first-child {
+            border-left: 1px solid black;
+        }
+        .tabnav li a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+        .is-active {
+            background-color: blanchedalmond;
+        }
+        .is-active a {
+            pointer-events: none;
+            color: red;
+        } */
+
+        /* 모듈 */
+        /* .mod {
+            border: 1px solid;
+        } */
+        /* 테마 */
+        /* .mod {
+            border-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <!-- OOCSS 1 -->
+    <!-- <button type="button" class="btn"></button>
+    <button type="button" class="btn-close"></button> -->
+
+    <!-- OOCSS 2 -->
+    <!-- <main id="main">
+      <button type="button" class="btn general">기본 버튼</button>
+      <button type="button" class="btn warning">취소 버튼</button>
+    </main> -->
+
+    <!-- SMACSS : module-->
+    <!-- <a href="" class="btn btn-small btn-long">아이디/비밀번호</a>
+    <a href="" class="btn btn-small">로그인</a> -->
+
+    <!-- SMACSS : state -->
+    <!-- <ul class="tabnav">
+      <li><a href="" class="is-active">tab1</a></li>
+      <li><a href="">tab2</a></li>
+      <li><a href="">tab3</a></li>
+      <li><a href="">tab4</a></li>
+    </ul> -->
+</body>
+</html>

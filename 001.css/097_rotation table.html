@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>perspective</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .axis1 {
+      border: 1px solid red;
+      width: 200px;
+      height: 150px;
+      perspective: 450px;
+    }
+    .axis2 {
+      border: 1px solid red;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .axis2:hover {
+      transform: rotateY(360deg);
+      transition: all 5s linear;
+    }
+    .axis2 div[class ^= box] {
+      position: absolute;
+      width: 200px;
+      height: 170px;
+    }
+
+    .box1 {
+      transform: rotateY(0deg) translateZ(200px);
+      background-color: rgba(255, 0, 0, 0.459);
+    }
+    .box2 {
+      transform: rotateY(60deg) translateZ(200px);
+      background-color: rgba(255, 166, 0, 0.432);
+    }
+    .box3 {
+      transform: rotateY(120deg) translateZ(200px);
+      background-color: rgba(255, 255, 0, 0.459);
+    }
+    .box4 {
+      transform: rotateY(180deg) translateZ(200px);
+      background-color: rgba(0, 128, 0, 0.479);
+    }
+    .box5 {
+      transform: rotateY(240deg) translateZ(200px);
+      background-color: rgba(0, 0, 255, 0.473);
+    }
+    .box6 {
+      transform: rotateY(300deg) translateZ(200px);
+      background-color: rgba(128, 0, 128, 0.459);
+    }
+  </style>
+</head>
+<body>
+  <div class="axis1">
+    <div class="axis2">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+      <div class="box6">6</div>
+    </div>
+  </div>
+</body>
+</html>
