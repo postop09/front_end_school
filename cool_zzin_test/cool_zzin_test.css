@@ -1,0 +1,102 @@
+/* util */
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.hide_text {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+/* style */
+/* Landing page */
+.landing {
+  height: 70vh;
+  background-color: #0D6EFD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.landing h1 {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-bottom: 29px;
+  padding-bottom: 10px;
+}
+.landing .landing_text {
+  margin-bottom: 26px;
+}
+.landing p {
+  margin-bottom: 2px;
+}
+.landing button {
+  width: 85px;
+  height: 38px;
+}
+.landing_footer {
+  height: 30vh;
+  font-size: 16px;
+  color: #7C8081;
+  background-color: #E8EEF4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Test page */
+#test_header {
+  height: 10vh;
+  color: #FFFFFF;
+  background-color: #0D6EFD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#test_header h1 {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+#test_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+#test_section h3 {
+  font-weight: bold;
+}
+#test_section article {
+  border-bottom: 2px solid #EEEEEE;
+  padding: 40px 0;
+}
+#text_footer {
+  height: 15vh;
+  background-color: #E8EEF4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* result_5 */
+.result {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.result img {
+  width: 80%;
+  max-width: 500px;
+}
+.result h2 {
+  font-weight: bold;
+}
+@media screen and (max-width: 780px) {
+  .test_container {
+    padding: 30px;
+  }
+}
