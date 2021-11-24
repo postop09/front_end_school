@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* 여러줄 주석은 css로 옮겨가도 남아있다 */
+ul {
+  list-style: none;
+}
+
+ul li {
+  color: red;
+  font-size: 20px;
+}
+
+.one {
+  color: navy;
+}
+
+.one .two {
+  color: purple;
+}
+
+.one .two .three {
+  font-size: 10px;
+}
+
+.one .two .three .four {
+  font-size: 20px;
+}
+
+.one .two .five {
+  color: red;
+}
+
+.add-icon {
+  background-image: url("./assets/arrow-right-solid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+/*# sourceMappingURL=001.css.map */
