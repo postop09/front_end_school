@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>color</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: peru;
+      transition: all 1s;
+    }
+    .box_btn {
+      width: 500px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .change_crimson {
+      background-color: crimson;
+    }
+    .change_small {
+      width: 500px;
+      height: 100px;
+    }
+    .change_shape {
+      border-radius: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box_btn">
+    <button type="button" class="btn_color">Color</button>
+    <button type="button" class="btn_size">Size</button>
+    <button type="button" class="btn_shape">Shape</button>
+  </div>
+  <script>
+    let box = document.querySelector('.box')
+    let btnColor = document.querySelector('.btn_color');
+    let btnSize = document.querySelector('.btn_size');
+    let btnShape = document.querySelector('.btn_shape');
+    btnColor.addEventListener('click', function() {
+      box.classList.toggle('change_crimson')
+    });
+    btnSize.addEventListener('click', function() {
+      box.classList.toggle('change_small')
+    });
+    btnShape.addEventListener('click', function() {
+      box.classList.toggle('change_shape')
+    })
+  </script>
+</body>
+</html>
