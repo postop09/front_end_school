@@ -1,8 +1,4 @@
 
-
-
-
-
 // this: 함수를 호출하는 객체
 function aboutThis() {
   console.log(this);
