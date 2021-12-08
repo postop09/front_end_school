@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백지옥 만들기</title>
+</head>
+<body>
+  <script>
+    const userdb = [
+  {
+    "_id": "61b05e5051a753f0ac9e121a",
+    "id": "Ora",
+    "pw": "0c397a89-3663-4bbf-a4fb-f00ce2249af9",
+    "index": 0,
+    "picture": "http://placehold.it/32x32",
+    "age": 33,
+    "eyeColor": "green",
+    "name": "Misty Stephenson",
+    "gender": "female",
+    "company": "BLURRYBUS",
+    "email": "mistystephenson@blurrybus.com",
+    "phone": "+1 (929) 510-3294",
+    "address": "550 Bokee Court, Welch, Oklahoma, 3902",
+    "grade": "새싹"
+  },
+  {
+    "_id": "61b05e50293b4cec30df63a5",
+    "id": "Ericka",
+    "pw": "7b76826a-218d-4bfb-80e1-2912e0c099a0",
+    "index": 1,
+    "picture": "http://placehold.it/32x32",
+    "age": 40,
+    "eyeColor": "brown",
+    "name": "Pearson Downs",
+    "gender": "male",
+    "company": "XURBAN",
+    "email": "pearsondowns@xurban.com",
+    "phone": "+1 (889) 574-2609",
+    "address": "675 Malbone Street, Knowlton, Kentucky, 9286",
+    "grade": "실버"
+  },
+  {
+    "_id": "61b05e503d72cf016f4706fc",
+    "id": "Schroeder",
+    "pw": "c604dc3f-699b-4b5a-b7fd-2048f796641d",
+    "index": 2,
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "eyeColor": "blue",
+    "name": "Jackie Barlow",
+    "gender": "female",
+    "company": "NORALEX",
+    "email": "jackiebarlow@noralex.com",
+    "phone": "+1 (992) 530-2727",
+    "address": "242 Roosevelt Place, Maury, Puerto Rico, 6422",
+    "grade": "실버"
+  },
+  {
+    "_id": "61b05e50a0543d78d7e60601",
+    "id": "Mclean",
+    "pw": "a737260f-d770-4a86-833e-899e38b07c04",
+    "index": 3,
+    "picture": "http://placehold.it/32x32",
+    "age": 26,
+    "eyeColor": "blue",
+    "name": "Lori Rivera",
+    "gender": "female",
+    "company": "INFOTRIPS",
+    "email": "loririvera@infotrips.com",
+    "phone": "+1 (972) 540-2648",
+    "address": "519 Beekman Place, Nanafalia, Tennessee, 8873",
+    "grade": "실버"
+  },
+  {
+    "_id": "61b05e5066d56968e52ff0fa",
+    "id": "Wade",
+    "pw": "2b23ebd6-96a7-4ac7-a65d-d3e0e2277a98",
+    "index": 4,
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "eyeColor": "green",
+    "name": "Mann Kaufman",
+    "gender": "male",
+    "company": "GLUID",
+    "email": "mannkaufman@gluid.com",
+    "phone": "+1 (800) 471-2844",
+    "address": "756 Riverdale Avenue, Lowgap, New Hampshire, 9234",
+    "grade": "일반"
+  },
+  {
+    "_id": "61b05e50bd1c01c25583fd5d",
+    "id": "Leona",
+    "pw": "cb7f9140-9938-4484-a45f-bc68ca605269",
+    "index": 5,
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "eyeColor": "green",
+    "name": "Wilma Richmond",
+    "gender": "female",
+    "company": "CAPSCREEN",
+    "email": "wilmarichmond@capscreen.com",
+    "phone": "+1 (974) 464-3683",
+    "address": "428 Sumner Place, Loretto, Northern Mariana Islands, 4563",
+    "grade": "다이아몬드"
+  },
+  {
+    "_id": "61b05e50a46f1ce1b5acea62",
+    "id": "Stephanie",
+    "pw": "edc28064-5d75-4d27-871f-e135e79db55f",
+    "index": 6,
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "brown",
+    "name": "Geneva Gallagher",
+    "gender": "female",
+    "company": "URBANSHEE",
+    "email": "genevagallagher@urbanshee.com",
+    "phone": "+1 (836) 528-3916",
+    "address": "554 Randolph Street, Chalfant, Minnesota, 8187",
+    "grade": "일반"
+  },
+  {
+    "_id": "61b05e5033b68d0df54680d7",
+    "id": "yunsik",
+    "pw": "1234",
+    "index": 7,
+    "picture": "http://placehold.it/32x32",
+    "age": 21,
+    "eyeColor": "green",
+    "name": "Phillips Hampton",
+    "gender": "male",
+    "company": "GEEKFARM",
+    "email": "phillipshampton@geekfarm.com",
+    "phone": "+1 (884) 597-3090",
+    "address": "986 Williams Avenue, Sims, Florida, 2953",
+    "grade": "관리자"
+  },
+  {
+    "_id": "61b05e500e915124eaff3cbb",
+    "id": "Doris",
+    "pw": "49aa23cb-04aa-423d-bc62-1c07444be27d",
+    "index": 8,
+    "picture": "http://placehold.it/32x32",
+    "age": 24,
+    "eyeColor": "blue",
+    "name": "Holly Hopkins",
+    "gender": "female",
+    "company": "BUZZNESS",
+    "email": "hollyhopkins@buzzness.com",
+    "phone": "+1 (968) 443-3391",
+    "address": "278 Empire Boulevard, Layhill, Alaska, 4485",
+    "grade": "골드"
+  }
+]
+
+  class GetUserData {
+    login(아이디, 비밀번호, 성공, 실패) {
+      const data = userdb.find(user => user.id === 아이디 && user.pw === 비밀번호);
+      if(data) {
+        성공(아이디)
+      } else {
+        실패(new Error('로그인 실패'))
+      }
+    }
+    getUserDataSet(이용자, 성공, 실패) {
+      const data = userdb.find(user => user.id === 이용자);
+      if(data) {
+        성공({
+          id : data.id,
+          picture : data.picture,
+          name : data.name,
+          company : data.company,
+          email : data.email,
+          grade : data.grade
+        });
+      } else {
+        실패(new Error('데이터 베이스 로드 실패'))
+      }
+    }
+  }
+
+  const userData = new GetUserData()
+  const id = 'yunsik';
+  const pw = '1234';
+  userData.login(
+    id,
+    pw,
+    (userID) => {
+      userData.getUserDataSet(
+        userID,
+        (userBasicInfo) => {
+          console.log(userBasicInfo);
+        },
+        (실패) => {
+          console.log(실패);
+        }
+      )
+    },
+    (실패) => {
+      console.log(실패);
+    }
+  )
+  </script>
+</body>
+</html>
