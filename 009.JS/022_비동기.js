@@ -44,7 +44,7 @@ console.log('hello world2');
 
 // then : 정상적으로 실행된 다음 단계
 // 이 형태를 알고 있자.
-// new Promise((resolve, reject) => {...code...})
+// new Promise((resolve, reject) {...code...})
 //   .then(...code...)
 //   .then(...code...)
 //   .finally(...code...)
