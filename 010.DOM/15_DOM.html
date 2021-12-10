@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+
+<body>
+
+    <h2>셀렉트 박스 만들기</h2>
+    <article class="cont-select">
+        <button class="btn-select">나의 최애 프로그래밍 언어</button>
+        <ul class="list-member">
+            <!-- <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li> -->
+        </ul>
+    </article>
+    <script>
+      const btnMain = document.querySelector('.btn-select');
+      const listUl = document.querySelector('.list-member');
+      let arryText = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'];
+      
+      arryText.forEach((i) => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.setAttribute('type', 'button');
+        button.textContent = i;
+        listUl.appendChild(li).appendChild(button);
+      })
+
+      btnMain.addEventListener('click', () => {
+        btnMain.classList.toggle('on');
+      })
+      
+      listUl.addEventListener('click', (e) => {
+        if (e.target.nodeName === 'button') {
+          btnMain.textContent = e.target.textContent;
+          btnMain.classList.remove('on');
+        };
+      })
+
+
+
+      // for(i of arryText) {
+      //   const li = document.createElement('li');
+      //   const button = document.createElement('button');
+      //   button.setAttribute('type', 'button');
+      //   button.textContent = i;
+      //   listUl.appendChild(li);
+      //   li.appendChild(button);
+      // }
+
+      
+    </script>
+</body>
+
+</html>
