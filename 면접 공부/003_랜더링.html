@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>렌더링</h1>
+  <p>브라우저가 웹 페이지를 렌더링하는 과정을 설명해주세요.</p>
+  <ol>
+    <li>DOM Tree</li>
+    <li>CSS Object Model (CSSOM)</li>
+    <li>Render Tree</li>
+    <li>Painting(여러개의 레이어로 나누어 출력)</li>
+    <li>Compositing(나뉘어진 레이아웃을 합쳐주는 과정)</li>
+  </ol>
+  <!-- 베스트 답변 -->
+  <p> 브라우저 렌더링 과정은 우선, 사용자가 페이지에 접속하고 HTML을 서버에서 내려받게 되면 이를 브라우저 렌더링 엔진에서 파싱(처리)합니다. 이렇게 "DOM 트리"를 만들고, link 태그를 통해 CSS 파싱을 해서 "CSSOM 트리"를 만듭니다. DOM 트리와 CSSOM 트리를 결합한 것이 "렌더 트리"가 되고, 레이아웃 작업을 통해 사용자에게 그려줄 영역을 계산해서 화면에 뿌려줍니다. 이 과정을 진행하다가 자바스크립트 런타임 환경에 수행권한을 넘겨 결과 값을 받으면 DOM 파싱은 중단됩니다. 모든 노드 수치를 재계산해서 렌더 트리를 재생성하는 과정을 "reflow"라 하고, 이후 재생성된 렌더 트리를 다시 그리는 것을 "repaint"라 합니다. 리페인트는 레이아웃 수치에 영향을 끼칠 때만 진행됩니다. </p>
+
+
+  <!-- 참고 -->
+  <p>웹페이지가 로드되면 브라우저는 먼저 HTML 텍스트를 읽고 이걸로 DOM 트리를 만든다. 그러고 나서 CSS를 처리하고 CSS로 CSSOM 트리를 만든다. DOM, CSSOM 트리가 만들어진 다음 이 두 트리로 Render 트리를 만든다. Render 트리가 만들어지면 브라우저는 요소 하나하나를 화면에 출력한다.</p>
+
+  <p>세가지로 정리하여 말씀드리겠습니다. 첫번째로 HTML을 읽어 내려가면서 DOM Tree를 생성합니다. 두번째로 CSS를 읽어 내려가면서 CSSOM Tree를 생성합니다. 마지막으로 위에 두 과정으로 생겨난 트리를 바탕으로 랜더 트리를 형성합니다. 랜더트리가 형성되면 인식한 요소를 화면에 출력하게 됩니다.</p>
+
+  <!-- 번외 -->
+  <p>왜 문서 중간에 스크립트를 넣으면 안될까?</p>
+  스크립트를 만나면 돔 파싱을 중단하고 스크립트 계산을 한다.
+</body>
+</html>

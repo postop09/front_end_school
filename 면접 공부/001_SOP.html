@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>면접 예상 질문</title>
+</head>
+<body>
+  <h1>면접 예상 질문</h1>
+  <p>SOP가 무엇인지 설명해주세요</p>
+  <p>
+    <p>- SOP(Same-Origin Policy)란 동일 출처 정책이라 불린다.</p>
+    <p>- [프로토콜, 호스트, 포트]가 동일한 출처에서 불러온 문서, 스크립트, 리소스로 상호작용을 제한한다.</p>
+    <p>- 다른 출처에서 가져온 리소스와 상호작용하는 것을 제한하는 보안 방식이다.</p>
+    <p>- 악의적으로 문서를 분리하여 공격받을 수 있는 경로를 줄이는 역할을 해준다.</p>
+  </p>
+
+  <article>
+    <h2>SOP!!</h2>
+    <iframe src="https://www.naver.com" frameborder="0"></iframe>
+    <iframe width="906" height="510" src="https://www.youtube.com/embed/5tQeSeyUQL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe>
+    <iframe src="001_SOP2.html" frameborder="0" class="sop2"></iframe>
+  </article>
+  <script>
+    const pageOther = document.querySelector('.youtube');
+    const sop2 = document.querySelector('.sop2');
+
+    pageOther.onload = function() {
+      console.log(`pageOther : ${pageOther.contentDocument}`);
+    }
+    sop2.onload = function() {
+      console.log(`sop2 : ${sop2.contentDocument}`);
+    }
+
+    // console.log(`pageOther : ${pageOther}`);
+    // console.log(`sop2 : ${sop2}`);
+  </script>
+</body>
+</html>

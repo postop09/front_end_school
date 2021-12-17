@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORS</title>
+</head>
+<body>
+  <h1>CORS!!</h1>
+  <p>CORS가 무엇인지 설명해주세요.</p>
+  <p>
+    <p>SOP를 우회하기 위한 방법이다.</p>
+    <p>교차 출처 리소스 공유(Cross-Origin Resource Sharing, CORS)이라 불린다.</p> 
+    <p>추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여한다.</p>
+    <p>CORS는 동일한 도메인이 아닌 다른 도메인에 리소스를 요청할 시에 서로 다른 origin에 대하여 HTTP 요청이 가능하게 해주는 표준</p>
+  </p>
+  <br>
+  <p>프론트 단에서는 조치할 수 있는 것이 아니다.</p>
+  <p>백엔드 개발자와 협업하여 응답 헤더 설정을 부탁하자.</p>
+  <p>네트워크 응답 헤더에 중요한 키워드 : <strong>Access-Control-Allow-Origin : *</strong>로 응답하면 모든 도메인에서의 접근이 가능하다.</p>
+
+  <script>
+    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function() {
+      var superHeroes = request.response;
+      console.log(superHeroes);
+    }
+  </script>
+</body>
+</html>
