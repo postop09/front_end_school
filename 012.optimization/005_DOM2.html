@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM접근</title>
+</head>
+<body>
+  <h1>DOM 접근 테스트</h1>
+  <main>
+    <!-- <article class="parent">
+      <figure>
+        <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg" alt="" class="figImg">
+        <figcaption class="figCap">유재석씨가 코로나19에 감염되었다는 소식입니다.</figcaption>
+      </figure>
+    </article> -->
+
+
+  </main>
+  <script>
+    const main = document.querySelector('main');
+
+    for (let i = 0; i < 10; i++) {
+      const article = document.createElement('article');
+      article.innerHTML = `
+        <figure>
+          <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg" alt="" class="figImg">
+          <figcaption class="figCap">유재석씨가 코로나19에 감염되었다는 소식입니다.</figcaption>
+        </figure>
+      `;
+      main.appendChild(article);
+    }
+  </script>
+</body>
+</html>
